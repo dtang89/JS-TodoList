@@ -65,15 +65,30 @@ var todoList = {
     }
 };
 
-var test = {
-    todoText: '',
-    completed: false//Boolean true or false
 
-}
-todoList.displayTodos();
-todoList.addTodo('first');
-todoList.addTodo('second');
-todoList.toggleCompleted(0);
+var displayTodosButton = document.getElementById('displayTodoButton');
+
+displayTodosButton.addEventListener('click', function(){
+    todoList.displayTodos();
+});
+
+var toggleAllButton = document.getElementById('toggleAllButton');
+toggleAllButton.addEventListener('click', function(){
+    todoList.toggleAll();
+
+});
+
+
+
+// var test = {
+//     todoText: '',
+//     completed: false//Boolean true or false
+//
+// }
+// todoList.displayTodos();
+// todoList.addTodo('first');
+// todoList.addTodo('second');
+// todoList.toggleCompleted(0);
 
 // console.log(todoList.addTodo('boolean testing'))
 // console.log(todoList.toggleCompleted(0))
